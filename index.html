@@ -257,7 +257,7 @@
 
         <figure class="diagram-card reveal" data-lightbox>
           <div class="diagram-card__img">
-            <img src="img/modelo-conceptual.png" alt="Modelo conceptual" loading="lazy">
+            <img src="img/modelo_conceptual.png" alt="Modelo conceptual" loading="lazy">
             <span class="diagram-card__zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
           </div>
           <figcaption>
@@ -272,8 +272,30 @@
             <span class="diagram-card__zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
           </div>
           <figcaption>
-            <h3>Modelo lógico (ER)</h3>
+            <h3>Modelo lógico</h3>
             <p>Diagrama entidad-relación con tablas, llaves primarias/foráneas y relaciones para MySQL.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="diagram-card reveal" data-lightbox>
+          <div class="diagram-card__img">
+            <img src="img/modelo_mer.png" alt="Modelo entidad-relación" loading="lazy">
+            <span class="diagram-card__zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </div>
+          <figcaption>
+            <h3>Modelo entidad-relación</h3>
+            <p>Representación detallada de entidades, atributos y relaciones del dominio de negocio antes de su normalización.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="diagram-card reveal" data-lightbox>
+          <div class="diagram-card__img">
+            <img src="img/modelo_fisico.png" alt="Modelo físico de base de datos" loading="lazy">
+            <span class="diagram-card__zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </div>
+          <figcaption>
+            <h3>Modelo físico</h3>
+            <p>Estructura final de tablas, tipos de dato, índices y restricciones implementada en el motor MySQL.</p>
           </figcaption>
         </figure>
 
@@ -316,17 +338,47 @@
             <span class="pattern-card__badge">Repository</span>
             <p>Aísla el acceso a la base de datos del resto de la lógica de negocio, centralizando las consultas relacionadas con cada entidad.</p>
           </div>
-        </div>
         <div class="justification">
           <i class="fa-solid fa-circle-check"></i>
           <p><strong>Justificación:</strong> la combinación de estos dos patrones mantiene el código organizado y con responsabilidades claras, favorece la mantenibilidad al aislar la lógica de acceso a datos —de modo que un cambio de motor de base de datos afectaría únicamente a los repositorios— y prepara al sistema para escalar sin necesidad de reestructurar lo ya construido.</p>
         </div>
       </div>
 
+      <!-- Stack tecnológico -->
+      <div class="dev-block reveal">
+        <h3><i class="fa-solid fa-microchip"></i> Stack tecnológico</h3>
+        <div class="stack-grid">
+          <span class="stack-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+          <span class="stack-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+          <span class="stack-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span class="stack-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap 5</span>
+          <span class="stack-chip"><i class="fa-brands fa-node-js"></i> Node.js</span>
+          <span class="stack-chip"><i class="fa-solid fa-route"></i> Express</span>
+          <span class="stack-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+          <span class="stack-chip"><i class="fa-solid fa-cubes"></i> Sequelize (ORM)</span>
+          <span class="stack-chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+        </div>
+      </div>
+
       <!-- Estándares -->
       <div class="dev-block reveal">
         <h3><i class="fa-solid fa-code"></i> Estándares de programación utilizados</h3>
-        <p>El proyecto sigue convenciones de nomenclatura consistentes: <code>camelCase</code> para variables, atributos y métodos; <code>PascalCase</code> para clases, controladores, servicios y repositorios; y <code>snake_case</code> para tablas y campos en la base de datos. A nivel de estilo se emplean 2 espacios de indentación en JavaScript, líneas de máximo 100 caracteres y llaves obligatorias en las estructuras de control, junto con los principios <strong>DRY</strong>, <strong>KISS</strong> y <strong>YAGNI</strong> como guía general de diseño del código.</p>
+        <div class="standards-grid">
+          <div class="standard-card">
+            <span class="standard-card__badge"><i class="fa-brands fa-js"></i> JavaScript (Frontend / Backend)</span>
+            <ul>
+              <li><code>camelCase</code> para variables, atributos y métodos.</li>
+              <li><code>PascalCase</code> para clases, controladores, servicios y repositorios.</li>
+            </ul>
+          </div>
+          <div class="standard-card">
+            <span class="standard-card__badge"><i class="fa-solid fa-database"></i> Base de datos (MySQL)</span>
+            <ul>
+              <li><code>snake_case</code> para tablas y campos.</li>
+            </ul>
+          </div>
+        </div>
+        <p>A nivel de estilo general se emplean 2 espacios de indentación en JavaScript, líneas de máximo 100 caracteres y llaves obligatorias en las estructuras de control, junto con los principios <strong>DRY</strong>, <strong>KISS</strong> y <strong>YAGNI</strong> como guía general de diseño del código.</p>
         <div class="justification">
           <i class="fa-solid fa-circle-check"></i>
           <p><strong>Justificación:</strong> nombrar cada elemento de forma predecible y coherente reduce la curva de aprendizaje del código para cualquier persona que lo revise, y aplicar principios como DRY, KISS y YAGNI evita duplicación y complejidad innecesaria, lo que se traduce en un código más legible, fácil de depurar y de calidad consistente en todo el proyecto.</p>
